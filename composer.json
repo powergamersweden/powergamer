@@ -1,0 +1,44 @@
+{
+	"require": {
+		"wordpress/wordpress" : "4.1",
+		"intervention/image" : "~2.0",
+		"ridewing/wp-superpowers" : "master"
+	},
+    "minimum-stability" : "dev",
+    "prefer-stable": true,
+    "extra": {},
+	"require-dev": {},
+	"repositories": [{
+		"type": "package",
+		"package": {
+			"name": "wordpress/wordpress",
+			"type": "wordpress-core",
+			"version": "4.1",
+			"dist": {
+				"type": "zip",
+				"url": "https://sv.wordpress.org/wordpress-4.1-sv_SE.zip"
+			},
+			"require" : {
+				"johnpbloch/wordpress-core-installer": "~0.1"
+			}
+		}
+	},
+	{
+		
+		"type": "composer",
+		"url": "http://wpackagist.org"
+	},
+	{
+		"url": "https://github.com/ridewing/wp-superpowers.git",	
+		"type": "git"
+	}],
+	"config": {},
+    "extra": {
+    	"wordpress-install-dir": {
+    		"wordpress/wordpress": "./public/wordpress"
+    	},
+		"installer-paths": {
+			"./public/plugins/{$name}/": ["type:wordpress-plugin"]
+		}
+    }
+}

@@ -1,0 +1,7 @@
+.idea
+vendor
+public/wordpress
+public/uploads
+public/plugins/*
+public/themes/*
+!public/themes/powergamer
