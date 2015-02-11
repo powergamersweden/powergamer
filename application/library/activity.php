@@ -2,6 +2,11 @@
 
 class Activity extends SuperObject {
 
+	function url($userId, $activityId){
+		$userLink = $this->user->getUserLink($userId);
+		return "{$userLink}/?activity={$activityId}";
+	}
+
 	function create($type, $userId, $content, $gameId = null){
 		global $wpdb;
 		$table = "{$wpdb->prefix}activity";

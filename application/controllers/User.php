@@ -24,6 +24,7 @@ class User extends SuperTypeController {
 
 	function view() {
 
+		// Handle user logout event
 		if(!empty($_GET['logout'])){
 			wp_logout();
 			$this->app->redirect('');
@@ -31,6 +32,7 @@ class User extends SuperTypeController {
 
 		$notificationId = empty($_GET['notification'])?null:$_GET['notification'];
 
+		// If user comes in from a notification, remove notification and redirect to location
 		if(!empty($notificationId)) {
 			$notification = $this->notification->get($notificationId, $this->user->id());
 			$this->notification->delete($notificationId);

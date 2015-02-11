@@ -3781,11 +3781,17 @@ body.fixed-player .podcast-header .header-content .box-art {
   -moz-border-radius: 50%;
   border-radius: 50%;
   float: left;
+  margin: 0 20px 0 0;
 }
 .activity .content {
   text-align: left;
   padding-top: 0;
   padding-right: 0;
+  padding-left: 0;
+  position: relative;
+}
+.activity .content .inner-content {
+  padding-left: 86px;
 }
 .activity .content p {
   text-align: left;
@@ -3823,6 +3829,7 @@ body.fixed-player .podcast-header .header-content .box-art {
 }
 .activity .content .game-info {
   background: white;
+  margin-left: 77px;
 }
 .activity .content .game-info .game-about {
   padding-top: 20px;
@@ -3835,12 +3842,37 @@ body.fixed-player .podcast-header .header-content .box-art {
 .activity .content .game-info .game-about a.game-title:hover {
   color: #ff9600;
 }
+@media (max-width: 550px) {
+  .activity .content .inner-content {
+    padding: 0;
+  }
+  .activity .content .author {
+    padding: 12px 0;
+  }
+  .activity .content .author .author-title {
+    display: block;
+    font-size: 16px;
+  }
+  .activity .content .activity-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .activity .content .activity-content {
+    margin-top: 20px;
+  }
+  .activity .content .game-info {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+}
 .activity .toolbar {
   padding-top: 10px;
 }
 .activity .toolbar .link {
   font-size: 10px;
   text-decoration: none;
+  float: left;
 }
 .activity .toolbar .link:hover {
   text-decoration: underline;
@@ -3850,6 +3882,86 @@ body.fixed-player .podcast-header .header-content .box-art {
 }
 .activity .toolbar .activity-remove-link {
   margin-left: 10px;
+}
+@media (max-width: 550px) {
+  .activity .toolbar .link {
+    background: #363636;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    margin: 20px 0;
+    font-family: "Sintony", "helvetica neue", helvetica, arial;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    border-bottom: 3px solid #000000;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    outline: none;
+    padding: 5px 15px;
+    font-size: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    color: #292929;
+  }
+  .activity .toolbar .link:hover {
+    background: #292929;
+  }
+  .activity .toolbar .link.button-small {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+  .activity .toolbar .link.button-center {
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+  }
+  .activity .toolbar .link.button-wide {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  .activity .toolbar .link[data-loading] .ladda-label {
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0);
+  }
+  .activity .toolbar .link[data-loading] .ladda-spinner {
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+  }
+  .activity .toolbar .link .ladda-spinner {
+    left: 50%;
+  }
+  .activity .toolbar .link[data-icon] {
+    position: relative;
+    vertical-align: top;
+    line-height: 15px;
+  }
+  .activity .toolbar .link[data-icon]:before {
+    width: 40px;
+    content: attr(data-icon);
+    font-family: "powergamer";
+    font-size: 20px;
+    vertical-align: sub;
+    margin-right: 10px;
+    line-height: 15px;
+  }
+  .activity .toolbar .activity-remove-link {
+    margin-left: 10px;
+  }
 }
 .activity .activity-comments {
   display: none;
@@ -3909,10 +4021,10 @@ body.fixed-player .podcast-header .header-content .box-art {
   position: absolute;
   z-index: 11;
   width: 150px;
-  background: rgba(221, 221, 221, 0.7);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  background: rgba(221, 221, 221, 0.8);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
   box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
@@ -3934,12 +4046,12 @@ body.fixed-player .podcast-header .header-content .box-art {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -16px;
-  border: 16px solid transparent;
-  border-bottom-color: rgba(221, 221, 221, 0.7);
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-bottom-color: rgba(221, 221, 221, 0.8);
   border-top-width: 0;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   content: "";
 }
 .notification {

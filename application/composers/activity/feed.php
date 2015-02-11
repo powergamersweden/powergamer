@@ -19,7 +19,8 @@ class ActivityFeed extends SuperComposer {
 			'isLoggedInUser' => $this->user->is($activity->user->id),
 			'subtitle' => $this->user->getProperty($activity->user->id, 'title'),
 			'youtube' => $activity->youtube,
-			'youtubeImage' => "http://img.youtube.com/vi/{$activity->youtube}/sddefault.jpg"
+			'youtubeImage' => "http://img.youtube.com/vi/{$activity->youtube}/sddefault.jpg",
+			'activityLink' => $this->activity->url($activity->user->id, $activity->id)
 		);
 	}
 

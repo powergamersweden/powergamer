@@ -21,7 +21,8 @@ class ActivityGame extends SuperComposer {
 			'comments' => $comments,
 			'image' => $this->user->image($activity->user->id),
 			'isLoggedInUser' => $this->user->is($activity->user->id),
-			'subtitle' => $this->user->getProperty($activity->user->id, 'title')
+			'subtitle' => $this->user->getProperty($activity->user->id, 'title'),
+			'activityLink' => $this->activity->url($activity->user->id, $activity->id)
 		);
 	}
 
