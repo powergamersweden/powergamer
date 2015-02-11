@@ -1,6 +1,8 @@
 .idea
 .DS_Store
 vendor
+public/.htaccess
+public/wp-config.php
 public/languages
 public/wordpress
 public/uploads
