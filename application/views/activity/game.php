@@ -22,16 +22,11 @@
 		</div>
 		<div class="clear"></div>
 		<div class="toolbar">
-			<?php if(count($comments) == 0): ?>
-				<a href="#comment" class="link activity-comment-link">Kommentera</a>
-			<?php else: ?>
-				<a href="#comment" class="link activity-comment-link"><?php echo count($comments) ?> kommentarer</a>
-			<?php endif ?>
-			<?php if($isLoggedInUser): ?>
-				<a href="#remove" class="link activity-remove-link right">Ta bort</a>
-			<?php endif ?>
+			<?php _view('activity.footer', array('isLoggedInUser' => $isLoggedInUser, 'comments' => $comments)) ?>
 		</div>
 	</div>
+
+	<?php _view('activity.share') ?>
 
 	<ul class="activity-comments">
 		<?php foreach($comments as $comment): ?>

@@ -13,6 +13,16 @@ class Game extends SuperTypeController {
 				'settings' => $this->create->group('settings', 'Game settings', array(
 					'repeatable' => false,
 					'properties' => array(
+						$this->create->property('release-date', 'date', array(
+							'label' => 'Release date',
+							'time' => true
+						)),
+						$this->create->property('email', 'email', array(
+							'label' => "This is my email test?"
+						)),
+						$this->create->property('boolean', 'bool', array(
+							'label' => "This is my bool test?"
+						)),
 						$this->create->property('review', 'dropdown', array(
 							'datasource'    => 'posts',
 							'posttype'      => 'review',
@@ -76,6 +86,7 @@ class Game extends SuperTypeController {
 				$this->notification->create('game', $game->ID, $notification, $userId);
 			}
 		}
+		$release = $this->property->getValue($this->postId, 'settings','release-date');
 
 		$this->game->save($this->postId, $review);
 

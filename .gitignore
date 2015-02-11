@@ -1,5 +1,7 @@
 .idea
+.DS_Store
 vendor
+public/languages
 public/wordpress
 public/uploads
 public/plugins/*

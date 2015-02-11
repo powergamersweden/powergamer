@@ -22,7 +22,7 @@ define('DB_NAME', 'powergamer');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'eIquosh2');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -73,7 +73,7 @@ define('SCRIPT_DEBUG', true);
 define('WP_ENV', 'development');
 
 define('WP_CONTENT_DIR', dirname(__FILE__));
-define('WP_CONTENT_URL', 'http://nicklas.x-dev.se/powergamer/deploy/public');
+define('WP_CONTENT_URL', 'http://powergamer.ridewing.se');
 if (file_exists($bootstrapFile = dirname(__DIR__).'/application/bootstrap.php'))
 	require_once($bootstrapFile);
 else if (file_exists($autoloadFile = dirname(dirname(__FILE__)).'/vendor/autoload.php'))

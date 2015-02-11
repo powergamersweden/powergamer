@@ -2,7 +2,7 @@
 	"require": {
 		"wordpress/wordpress" : "4.1",
 		"intervention/image" : "~2.0",
-		"ridewing/wp-superpowers" : "master"
+	    "ridewing/wp-superpowers": "dev-master"
 	},
     "minimum-stability" : "dev",
     "prefer-stable": true,
@@ -27,10 +27,6 @@
 		
 		"type": "composer",
 		"url": "http://wpackagist.org"
-	},
-	{
-		"url": "https://github.com/ridewing/wp-superpowers.git",	
-		"type": "git"
 	}],
 	"config": {},
     "extra": {

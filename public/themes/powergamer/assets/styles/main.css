@@ -3890,58 +3890,6 @@ body.fixed-player .podcast-header .header-content .box-art {
   margin-top: 10px;
   float: right;
 }
-.activity .activity-share {
-  display: none;
-  padding: 0;
-  margin: 20px 0 0 0;
-  list-style: none;
-  background: rgba(0, 0, 0, 0.08);
-}
-.activity .activity-share .button-share {
-  width: 23% !important;
-  margin-right: 1% !important;
-  margin-left: 1% !important;
-}
-.activity .activity-share .share-box {
-  padding: 20px;
-}
-.activity .activity-share.detach {
-  position: absolute;
-  z-index: 11;
-  width: 150px;
-  background: rgba(221, 221, 221, 0.7);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0px 2px 1 rgba(0, 0, 0, 0.4);
-}
-.activity .activity-share.detach .share-box {
-  padding: 15px;
-}
-.activity .activity-share.detach .button-share {
-  width: 100% !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  float: none;
-  margin-top: 10px;
-}
-.activity .activity-share.detach .button-share:first-child {
-  margin-top: 0;
-}
-.activity .activity-share.detach:after {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -16px;
-  border: 16px solid transparent;
-  border-bottom-color: rgba(221, 221, 221, 0.7);
-  border-top-width: 0;
-  width: 16px;
-  height: 16px;
-  content: "";
-}
 .notification {
   position: relative;
 }
