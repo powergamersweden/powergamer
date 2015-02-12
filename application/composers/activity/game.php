@@ -17,6 +17,7 @@ class ActivityGame extends SuperComposer {
 			'author' => $activity->user->data->display_name,
 			'authorLink' => $this->user->getUserLink($activity->user->id),
 			'date' => $activity->date,
+			'userId' => $activity->user->id,
 			'activityId' => $activity->id,
 			'comments' => $comments,
 			'image' => $this->user->image($activity->user->id),

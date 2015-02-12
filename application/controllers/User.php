@@ -268,4 +268,20 @@ class User extends SuperTypeController {
 			'count' => $this->notification->count($this->user->id())
 		);
 	}
+
+	public function removeActivity($args){
+
+		$success = false;
+
+		if(!empty($args['activityId']) && !empty($args['userId'])){
+
+			$this->activity->remove($args['activityId'], $args['userId']);
+			$success = true;
+		}
+
+		return array(
+			'success' => $success
+		);
+
+	}
 }

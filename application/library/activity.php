@@ -47,6 +47,15 @@ class Activity extends SuperObject {
 		}
 	}
 
+	function remove($activityId, $userId){
+
+		global $wpdb;
+		$table = "{$wpdb->prefix}activity";
+
+		$query = "DELETE FROM {$table} WHERE id = {$activityId} AND user = {$userId}";
+		$wpdb->query($query);
+	}
+
 	function replaceUsers($content){
 		preg_match_all("/(@[a-zA-Z0-9-]+)/", $content, $matches);
 		$users = null;

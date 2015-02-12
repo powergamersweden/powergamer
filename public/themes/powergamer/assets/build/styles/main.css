@@ -665,12 +665,12 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .not-small {
     display: none;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .not-smallest {
     display: none;
   }
@@ -842,9 +842,10 @@ h3,
     width: 600px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner-left {
     width: 100%;
+    border-right: none;
   }
 }
 .inner-right {
@@ -854,7 +855,7 @@ h3,
 .inner-right .section-title {
   display: block;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner-right {
     width: 100%;
   }
@@ -866,10 +867,10 @@ h3,
 }
 @media (max-width: 1050px) {
   .inner {
-    max-width: 900px;
+    max-width: 800px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner {
     width: 100%;
   }
@@ -883,7 +884,7 @@ h3,
 .inner.left-sidebar .inner-left .section-title {
   display: block;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner.left-sidebar .inner-left {
     width: 100%;
   }
@@ -896,7 +897,7 @@ h3,
     width: 650px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner.left-sidebar .inner-right {
     width: 100%;
   }
@@ -907,7 +908,7 @@ h3,
 .inner.left-menu .inner-left .section-title {
   display: block;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner.left-menu .inner-left {
     width: 100%;
   }
@@ -920,7 +921,7 @@ h3,
     width: 700px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inner.left-menu .inner-right {
     width: 100%;
   }
@@ -1214,7 +1215,7 @@ body.fixed-menu .header.header-main .menu-main {
 .menu.menu-main .menu-link:hover {
   border-bottom: 2px solid white;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .menu.menu-main .inner {
     max-width: none;
   }
@@ -1368,7 +1369,7 @@ body.fixed-menu .header.header-main .menu-main {
   background-size: cover;
   background-attachment: fixed;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .features .feature-item {
     background-attachment: local;
   }
@@ -2188,7 +2189,7 @@ body.fixed-menu .header.header-main .menu-main {
 .article-list.article-grid .article-list-item .article-image-list img {
   width: 100%;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .article-list.article-grid .article-list-item {
     width: 50%;
   }
@@ -2313,7 +2314,7 @@ body.fixed-menu .header.header-main .menu-main {
     height: 200px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .section-ad-750x250 {
     width: 100%;
     height: auto;
@@ -2326,7 +2327,7 @@ body.fixed-menu .header.header-main .menu-main {
 .article-list .section-ad-750x250 {
   margin-left: -20px;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .article-list .section-ad-750x250 {
     margin-left: 0;
   }
@@ -2492,7 +2493,7 @@ body.fixed-menu .header.header-main .menu-main {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
   filter: alpha(opacity=100);
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .review-header .header-content h1,
   .game-header .header-content h1,
   .video-header .header-content h1 {
@@ -3103,7 +3104,7 @@ body.fixed-player .header-placeholder {
 .video-archive .inner {
   display: flex;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .video-archive .inner {
     display: block;
   }
@@ -3163,7 +3164,7 @@ body.fixed-player .header-placeholder {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
   filter: alpha(opacity=100);
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .podcast-header .header-content h1 {
     font-size: 26px;
   }
@@ -3672,13 +3673,18 @@ body.fixed-player .podcast-header .header-content .box-art {
 .user-profile .inner {
   display: flex;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .user-profile .inner {
     display: block;
   }
 }
 .user-profile .menu {
   padding-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .user-profile .menu {
+    padding-bottom: 0;
+  }
 }
 .user-profile .menu a {
   display: block;
@@ -3775,6 +3781,11 @@ body.fixed-player .podcast-header .header-content .box-art {
   padding: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+@media (max-width: 600px) {
+  .activity {
+    padding: 20px 0;
+  }
+}
 .activity .author-image {
   width: 66px;
   -webkit-border-radius: 50%;
@@ -3842,7 +3853,7 @@ body.fixed-player .podcast-header .header-content .box-art {
 .activity .content .game-info .game-about a.game-title:hover {
   color: #ff9600;
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .activity .content .inner-content {
     padding: 0;
   }
@@ -3883,7 +3894,7 @@ body.fixed-player .podcast-header .header-content .box-art {
 .activity .toolbar .activity-remove-link {
   margin-left: 10px;
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .activity .toolbar .link {
     background: #363636;
     color: white;
@@ -3959,6 +3970,14 @@ body.fixed-player .podcast-header .header-content .box-art {
     margin-right: 10px;
     line-height: 15px;
   }
+  .activity .toolbar .link:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: #292929;
+  }
+  .activity .toolbar .link:active {
+    background: rgba(0, 0, 0, 0.2);
+    color: #292929;
+  }
   .activity .toolbar .activity-remove-link {
     margin-left: 10px;
   }
@@ -3969,6 +3988,11 @@ body.fixed-player .podcast-header .header-content .box-art {
   margin: 20px 0 0 0;
   list-style: none;
   background: rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 600px) {
+  .activity .activity-comments {
+    margin: 0;
+  }
 }
 .activity .activity-comments .author-image {
   width: 50px;
@@ -4008,6 +4032,9 @@ body.fixed-player .podcast-header .header-content .box-art {
   margin: 20px 0 0 0;
   list-style: none;
   background: rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .activity .activity-share .button-share {
   width: 23% !important;
@@ -4222,7 +4249,7 @@ body.fixed-player .podcast-header .header-content .box-art {
 .section-user-updates .user-post:last-child {
   border-right: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .section-user-updates .user-post {
     width: 100%;
     float: none;
@@ -4631,7 +4658,7 @@ body.fixed-player .podcast-header .header-content .box-art {
   margin-right: 0;
   margin-left: 20px;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .content img {
     max-width: none;
     width: 100%;

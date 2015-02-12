@@ -1,4 +1,4 @@
-<div class="activity activity-game">
+<div class="activity activity-game" data-id="<?php echo $activityId ?>" data-user="<?php echo $userId ?>">
 
 	<div class="content">
 		<img class="author-image" src="<?php echo $image ?>">
